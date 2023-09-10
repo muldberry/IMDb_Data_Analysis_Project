@@ -1,3 +1,9 @@
+# Checking duplicated values
+SELECT Title
+FROM moviedata
+GROUP BY Title
+HAVING COUNT(Title) > 2;
+
 #1 Display number of movies for each year
 SELECT Year, COUNT(Title) AS "Movies per Year"
 FROM moviedata
